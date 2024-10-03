@@ -1,0 +1,485 @@
+:root {
+    --main-color: rgb(255, 39, 255);
+    --text-color: #ffffff;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #323946;
+    --color-00: #0000001a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: var(--bg-color-02);
+}
+
+header .logo {
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .nav a {
+    margin-left: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Navegação do cabeçalho */
+header .nav a {
+    margin-left: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header .nav a:hover {
+    color: var(--main-color); 
+}
+
+
+section {
+    padding: 60px 100px;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color-01);
+}
+
+.home-content h3 {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.home-content h1 {
+    font-size: 48px;
+    color: var(--main-color);
+    margin: 10px 0;
+}
+
+.home-content h3 span {
+    color: var(--main-color);
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 500px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.social-media a {
+    margin-right: 20px;
+    color: var(--text-color);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--main-color);
+}
+
+.home-img {
+    position: relative;
+    max-width: 300px; 
+}
+
+.home-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home-img::before,
+.home-img::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg, var(--main-color), transparent);
+}
+
+.home-img::before {
+    height: 4px;
+    width: 100%;
+    bottom: -10px; 
+    left: 0;
+}
+
+.home-img::after {
+    height: 100%;
+    width: 4px;
+    right: -10px; 
+    top: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.service h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: var(--bg-color-02);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.service-box i {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.service-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+h2 span, .portfolio-layer a {
+    color: var(--main-color); 
+}
+
+.service h2, 
+.portfolio h2, 
+.contact h2 {
+    color: var(--text-color);
+}
+
+.service h2 span,
+.portfolio h2 span,
+.contact h2 span {
+    color: var(--main-color); 
+}
+
+.portfolio-layer a {
+    color: var(--main-color); 
+}
+
+.portfolio-layer a:hover {
+    color: #ffffff; 
+}
+
+.portfolio-box h4 {
+    color: var(--main-color);
+    margin: 0;
+    font-size: 24px; 
+}
+
+.portfolio-layer a {
+    color: var(--main-color);
+    font-size: 24px; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-layer a:hover {
+    color: #a22;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px; 
+    overflow: hidden;
+    text-align: center;
+}
+
+.portfolio-box img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1); 
+}
+
+.portfolio-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+.portfolio-layer p {
+    font-size: 12px;
+    margin: 0 auto;
+    max-width: 90%; 
+    word-wrap: break-word; 
+    text-align: justify; 
+}
+
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px;
+    text-align: center;
+    max-width: 100%; 
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.portfolio-box img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+    max-width: 100%;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    opacity: 1;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.input-box input, textarea {
+    width: 48%;
+    padding: 15px;
+    background-color: var(--bg-color-02);
+    border: none;
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.skills {
+    padding: 60px 100px;
+    background-color: var(--bg-color-01);
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.skills h2 span {
+    color: var(--main-color);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skill-box {
+    background-color: var(--bg-color-02);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); 
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+}
+
+.skill-box i {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    color: var(--main-color);
+    background-color: var(--bg-color-02);
+}
+
+.skill-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.skill-box p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsividade para telas menores que 1200px (largura de tablets) */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* Ajuste para 2 colunas */
+    }
+}
+
+/* Responsividade para telas menores que 768px (dispositivos móveis grandes) */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 36px; /* Diminui o tamanho do título */
+    }
+
+    .home-content h3 {
+        font-size: 18px; /* Ajuste menor para subtítulo */
+    }
+
+    .home-content p {
+        font-size: 16px; /* Ajuste menor para o parágrafo */
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Ajuste para 1 coluna */
+    }
+
+    .service-container {
+        flex-direction: column; /* Empilha as caixas de serviço */
+        gap: 10px;
+    }
+
+    .skills-container {
+        flex-direction: column; /* Empilha as caixas de habilidades */
+    }
+}
+
+/* Responsividade para telas menores que 576px (dispositivos móveis pequenos) */
+@media (max-width: 576px) {
+    header .logo {
+        font-size: 20px; /* Ajuste menor para o logo */
+    }
+
+    header {
+        padding: 10px 2%; /* Reduz o padding do cabeçalho */
+    }
+
+    .btn {
+        padding: 8px 20px; /* Botão menor */
+        font-size: 14px;
+    }
+
+    .home-img img {
+        max-width: 250px; /* Ajuste a imagem para dispositivos menores */
+    }
+
+    .portfolio-layer p {
+        font-size: 11px; /* Fonte menor para o texto de descrição */
+    }
+}
